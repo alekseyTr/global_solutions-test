@@ -1,0 +1,83 @@
+// Core variables and mixins
+@import "mixins";
+@import "variables";
+//Reset and Grid generate (use on start proect and insert in <head>)
+// @import "normalize";
+// @import "grid";
+
+//Load Libs Sass/SCSS
+
+
+*::-webkit-input-placeholder {
+  color: #666;
+  opacity: 1;
+}
+*:-moz-placeholder {
+  color: #666;
+  opacity: 1;
+}
+*::-moz-placeholder {
+  color: #666;
+  opacity: 1;
+}
+*:-ms-input-placeholder {
+  color: #666;
+  opacity: 1;
+}
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+  color: #666;
+}
+body input:required:valid,
+body textarea:required:valid {
+  color: #666;
+
+}
+//Custom Styles Here
+// ====================================================================
+// Slider section
+// ====================================================================
+.slider {
+  background: #ec6869 url(../img/slider_bg.jpg) no-repeat 0 0;
+  // TODO: remove
+  min-height: 400px;
+}
+.slider__title {
+  font: 34px "OpenSansSemiBold", sans-serif;
+  line-height: 45px; 
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 10px rgba(0,0,0, .1);
+}
+.slider__description {
+  font-size: 18px;
+  color: #fff;
+}
+.slider__button {
+   display: block;
+   width: 50%;
+   margin-top: 1.5rem;
+   margin-bottom: 1.5rem;
+   padding: 20px;
+   font: 16px "OpenSansSemiBold", sans-serif;
+   border-radius: 2px;
+   text-align: center;
+   color: #333;
+   text-transform: uppercase;
+   background-color: #ececec;
+   box-shadow: 2px 2px 2px rgba(224,97,97, .5);
+   // TODO: сделать кросбраузеной
+   background: linear-gradient(#fff 0%,  #d7d7d7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.help {
+  display: block;
+  font: 14px "OpenSansLight", sans-serif;
+  text-decoration: underline;
+  color: #e7e7e7;
+}
+.slider__img {
+  // удаляет отступ под фотографией
+  font-size: 0;
+} 
+//ALWAYS END
+@import "media";

@@ -1,0 +1,10 @@
+@import "mixins";
+
+// include fonts
+//template - font-face ($font-family,$file-path,$font-weight: normal,$font-style: normal) 
+@include font-face (OpenSansBold, "../fonts/OpenSansBold/OpenSansBold");
+@include font-face (OpenSansLight, "../fonts/OpenSansLight/OpenSansLight");
+@include font-face (OpenSansRegular, "../fonts/OpenSansRegular/OpenSansRegular");
+@include font-face (OpenSansSemiBold, "../fonts/OpenSansSemiBold/OpenSansSemiBold");
+
+// mixin for base font
