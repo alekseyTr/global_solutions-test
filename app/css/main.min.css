@@ -271,11 +271,62 @@ html {
 .slider__img {
   font-size: 0; }
 
+.test_js * {
+  outline: none; }
+
+.test_js .slider-nav,
 .test_js .slider {
+  background: transparent;
+  text-align: center;
+  font-size: 26px;
+  color: #fff; }
+
+.test_js .slide--full {
+  min-height: 480px;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 70px;
+  text-align: left; }
+
+.test_js .slide--mini {
+  min-height: 150px;
+  line-height: 150px; }
+
+.test_js .slider-nav {
   position: relative;
-  margin-top: 5rem;
-  padding: 20px 30px;
-  background: #D7D7D7; }
+  top: -80px; }
+  .test_js .slider-nav.slide--single {
+    width: 40%;
+    margin: 0 auto; }
+  .test_js .slider-nav .slick-track {
+    margin: 0 auto; }
+  .test_js .slider-nav .slick-next:before {
+    content: '>'; }
+  .test_js .slider-nav .slick-prev:before {
+    content: '<'; }
+  .test_js .slider-nav .slick-next:before,
+  .test_js .slider-nav .slick-prev:before {
+    color: #c2185b;
+    font-weight: bold; }
+  .test_js .slider-nav .slide {
+    display: inline-block;
+    min-height: 80px;
+    line-height: 80px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-bottom: 0;
+    cursor: pointer; }
+  .test_js .slider-nav img {
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle; }
+
+.test_js .slider {
+  margin-top: 100px; }
+  .test_js .slider .slide {
+    position: relative;
+    background-color: bisque; }
 
 .test_js .slider__title {
   margin-top: 0;
@@ -291,22 +342,22 @@ html {
   color: #000; }
 
 .test_js .slider__link {
+  font-size: 16px;
   font-style: italic;
   color: #2980B9; }
 
 .test_js .slider__img {
-  padding: 35px;
-  text-align: center; }
+  padding-top: 40px; }
   .test_js .slider__img img {
-    -webkit-border-radius: 5px;
-    border-radius: 5px; }
+    width: 100%; }
 
 .zoom-out {
-  position: relative;
+  position: absolute;
+  left: 40px;
+  bottom: 20px;
   width: 25px;
   height: 25px;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin: 0;
   border: 2px solid #7F8C8D;
   -webkit-border-radius: 50%;
   border-radius: 50%; }
@@ -322,33 +373,18 @@ html {
     height: 2px;
     background-color: #7F8C8D; }
 
-.mini-map {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  bottom: 0; }
-
-.mini-map__wrap {
-  margin: 0;
-  padding: 0; }
-
-.mini-map__slide {
-  position: relative;
-  display: inline-block;
-  width: 100px;
-  margin-left: 10px;
-  margin-right: 10px;
-  border: 1px solid #7F8C8D;
+.outline {
+  border: 1px solid #795548;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  -webkit-box-shadow: 0 3px 2px rgba(177, 177, 177, 0.5);
-  box-shadow: 0 3px 2px rgba(177, 177, 177, 0.5); }
-  .mini-map__slide img {
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    vertical-align: bottom; }
+  -webkit-box-shadow: 1px 1px 5px rgba(35, 35, 35, 0.5);
+  box-shadow: 1px 1px 5px rgba(35, 35, 35, 0.5); }
+
+.add-slide {
+  padding: 0 20px;
+  line-height: 50px;
+  color: #fff;
+  text-align: center; }
 
 .mini-map__desc {
   position: absolute;
@@ -381,72 +417,6 @@ html {
     border-bottom: none;
     border-right: none;
     background-color: #fff; }
-
-* {
-  outline: none; }
-
-.mini-map__slide:hover .mini-map__desc {
-  display: block; }
-
-.slider--mini {
-  position: relative;
-  padding-bottom: 100px;
-  text-align: center; }
-  .slider--mini .mini-map {
-    bottom: -90px; }
-
-.new-slider-full {
-  margin-top: 100px; }
-
-.new-slider-nav,
-.new-slider-full {
-  text-align: center;
-  font-size: 26px;
-  color: #fff; }
-
-.new-slide--full {
-  min-height: 400px;
-  padding-bottom: 50px; }
-
-.new-slide--mini {
-  min-height: 200px;
-  line-height: 200px; }
-
-.new-slide-1 {
-  background-color: tomato; }
-
-.new-slide-2 {
-  background-color: orange; }
-
-.new-slide-3 {
-  background-color: lightgreen; }
-
-.new-slider-nav {
-  position: relative;
-  top: -80px; }
-  .new-slider-nav .slick-track {
-    margin: 0 auto; }
-  .new-slider-nav .new-slide {
-    display: inline-block;
-    min-height: 80px;
-    line-height: 80px;
-    margin-left: 5px;
-    margin-right: 5px;
-    padding-bottom: 0;
-    border: 1px solid #795548;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    -webkit-box-shadow: 1px 1px 5px rgba(35, 35, 35, 0.5);
-    box-shadow: 1px 1px 5px rgba(35, 35, 35, 0.5); }
-
-.new-slide {
-  position: relative; }
-  .new-slide .zoom-out {
-    position: absolute;
-    left: 20px;
-    bottom: 20px;
-    margin: 0; }
 
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens */
