@@ -23,7 +23,7 @@ gulp.task('styles', function () {
 	}).on('error', sass.logError))
 	.pipe(rename({suffix: '.min', prefix : ''}))
 	.pipe(autoprefixer({browsers: ['last 15 versions'], cascade: false}))
-	.pipe(cleanCSS())
+	// .pipe(cleanCSS())
 	.pipe(gulp.dest('app/css'))
 	.pipe(browserSync.stream());
 });
@@ -32,6 +32,7 @@ gulp.task('scripts', function() {
 	return gulp.src([
 		'./app/libs/modernizr/modernizr.js',
 		'./app/libs/jquery/jquery-1.11.2.min.js',
+		'./app/libs/slick-1.5.9/slick/slick.js',
 		])
 		.pipe(concat('libs.js'))
 		// .pipe(uglify()) //Minify libs.js

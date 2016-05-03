@@ -6,7 +6,8 @@
 // @import "grid";
 
 //Load Libs Sass/SCSS
-
+@import "app/libs/slick-1.5.9/slick/slick.scss";
+@import "app/libs/slick-1.5.9/slick/slick-theme.scss";
 
 *::-webkit-input-placeholder {
   color: #666;
@@ -33,6 +34,8 @@ body textarea:required:valid {
   color: #666;
 
 }
+// TODO: remove
+html {background-color: blanchedalmond;}
 //Custom Styles Here
 // ====================================================================
 // Slider section
@@ -40,7 +43,7 @@ body textarea:required:valid {
 .slider {
   background: #ec6869 url(../img/slider_bg.jpg) no-repeat 0 0;
   // TODO: remove
-  min-height: 400px;
+  // min-height: 450px;
 }
 .slider__title {
   font: 34px "OpenSansSemiBold", sans-serif;
@@ -79,5 +82,190 @@ body textarea:required:valid {
   // удаляет отступ под фотографией
   font-size: 0;
 } 
+// ====================================================================
+// Slider section (test_js)
+// ====================================================================
+.test_js {
+  .slider {
+    position: relative;
+    margin-top: 5rem;
+    padding: 20px 30px; 
+    background: #D7D7D7;
+  }
+  .slider__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 32px;
+    font-size: 18px;
+    color: #000;
+  }    
+  h2.slider__title {
+      color: #2980B9;
+    }
+  .slider__description {
+    color: #000;
+  }
+  .slider__link {
+    font-style: italic;
+    color: #2980B9;
+  }
+  .slider__img {
+    padding: 35px;
+    text-align: center;
+    img {
+      border-radius: 5px;
+    }
+  }
+}
+// кнопка умньшения слайда
+.zoom-out {
+  position: relative;
+  width:25px;
+  height: 25px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border: 2px solid #7F8C8D;
+  border-radius: 50%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      // центрирование линии по осям X и Y 
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      
+      width: 60%;
+      height: 2px;
+      background-color: #7F8C8D;
+
+    }
+}
+// "Миникарта" слайдов
+.mini-map {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+.mini-map__wrap {
+  margin: 0;
+  padding: 0;
+}
+.mini-map__slide {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 1px solid #7F8C8D;
+  border-radius: 5px;
+  box-shadow: 0 3px 2px rgba(177,177,177,.5);
+  img {
+    border-radius: 5px;
+    vertical-align: bottom;
+  }
+}
+
+.mini-map__desc {
+  position: absolute;
+  bottom: -80px;
+  left: -130px;
+  display: none;
+  width: 350px;
+  padding: 10px;
+  border: 2px solid #7F8C8D;
+  border-radius: 5px;
+  background-color: #fff;
+  .slider__title {
+    font-size: 12px;
+    line-height: normal;
+  }
+  // стрелка указатель
+  &::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    transform: rotateZ(45deg);
+    width: 9px;
+    height: 9px;
+    border: 2px solid #7F8C8D;;
+    border-bottom: none;
+    border-right: none;
+    background-color: #fff;
+  }
+}
+* {
+  outline: none;
+}
+.mini-map__slide:hover .mini-map__desc {
+  display: block;
+}
+.slider--mini {
+  position: relative;
+  padding-bottom: 100px;
+  text-align: center;
+    .mini-map {
+      bottom: -90px;
+    }
+}
+
+//---------------------------------
+.new-slider-full {
+  margin-top: 100px;
+}
+.new-slider-nav,
+.new-slider-full {
+  text-align: center;
+  font-size: 26px;
+  color: #fff;
+}
+.new-slide--full {
+  min-height: 400px;
+  padding-bottom: 50px;
+  // line-height: 400px;
+}
+.new-slide--mini {
+  min-height: 200px;
+  line-height: 200px;
+}
+
+.new-slide-1 { background-color: tomato; }
+.new-slide-2 { background-color: orange; }
+.new-slide-3 { background-color: lightgreen; }
+.new-slider-nav {
+  position: relative;
+  top: -80px;
+
+// Центрирование навигации
+// TODO: remove (bad practices - change class library)
+  .slick-track {
+    margin: 0 auto;
+  }
+  .new-slide {
+    display: inline-block;
+    min-height: 80px;
+    line-height: 80px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-bottom: 0;
+    border: 1px solid #795548;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px rgba(35, 35, 35, 0.5);
+  }
+}
+// кнопка уменьшения
+.new-slide {
+  position: relative;
+  .zoom-out {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    margin: 0;
+  }
+}
 //ALWAYS END
 @import "media";
